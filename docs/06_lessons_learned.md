@@ -169,4 +169,148 @@ LinkedIn Angle:
 The first version of an AI product should not be impressive. It should be usable.
 
 ---
+Date:
 
+2026-06-13
+
+Original Assumption:
+
+Beauty salons need an AI knowledge base.
+
+New Insight:
+
+Salon owners do not care about AI knowledge bases. They care about customers, revenue, promotions, and saving time.
+
+Evidence:
+
+Founder discussions and industry observations.
+
+Why It Matters:
+
+Technology is not the product. Business outcomes are the product.
+
+Product Decision:
+
+Do not prioritize RAG. Prioritize Business Recorder Agent.
+
+LinkedIn Angle:
+
+Customers do not buy AI. Customers buy outcomes.
+
+---
+Date:
+
+2026-06-13
+
+Original Assumption:
+
+The product should start with advanced AI features.
+
+New Insight:
+
+The product should start with the user's daily behavior.
+
+Evidence:
+
+Owners record customers, revenue, and business performance every day. They do not query knowledge bases every day.
+
+Why It Matters:
+
+The product should fit an existing habit before asking the user to adopt a new workflow.
+
+Product Decision:
+
+Build Voice Input -> Structured Data -> Daily Report before everything else.
+
+LinkedIn Angle:
+
+Build around habits, not technology.
+
+---
+Date:
+
+2026-06-13
+
+Original Assumption:
+
+Salon owners should learn digital tools.
+
+New Insight:
+
+Salon owners do not want to learn software.
+
+Evidence:
+
+Excel and CRM adoption is extremely low. Many owners do not even have a habit of structured data recording.
+
+Why It Matters:
+
+If the product requires the owner to become a software user first, the product will likely fail before it creates value.
+
+Product Decision:
+
+Use chat-first interaction and voice-first interaction instead of traditional dashboards.
+
+LinkedIn Angle:
+
+The best interface may be a conversation.
+
+---
+Date:
+
+2026-06-13
+
+Original Assumption:
+
+AI architecture should come first.
+
+New Insight:
+
+Customer discovery should come first.
+
+Evidence:
+
+Real user discussions created more product clarity than any technical research.
+
+Why It Matters:
+
+Architecture should serve the user's real workflow, not the builder's excitement about technical design.
+
+Product Decision:
+
+Customer Discovery -> Product Design -> Architecture.
+
+LinkedIn Angle:
+
+Customer discovery before architecture.
+
+---
+Date:
+
+2026-06-13
+
+Original Assumption:
+
+I originally thought I was building an AI knowledge base for beauty salons. Most of my attention was on RAG, LangGraph, agents, and knowledge retrieval.
+
+New Insight:
+
+Real salon owners do not care about AI. They care about customers, revenue, promotions, and business growth.
+
+Evidence:
+
+Founder discussions and product thinking created the first major pivot: from Beauty Industry AI Knowledge Base to 老板娘经营助手.
+
+Why It Matters:
+
+This was the first major product pivot. AI is not the product. AI is the tool. The product is business value.
+
+Product Decision:
+
+Phase 1 should focus on the Business Recorder Agent: Voice/Text Input -> Structured Data -> Database -> Daily Report.
+
+LinkedIn Angle:
+
+AI is not the product. AI is the tool. The product is business value.
+
+---

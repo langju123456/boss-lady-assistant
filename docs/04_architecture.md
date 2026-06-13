@@ -66,3 +66,33 @@ Initial tables:
 * Add RAG only when historical activity plans, customer notes, and business documents become useful
 * Add WeChat integration later
 * Add dashboard later
+
+## Product Architecture Principle: 2026-06-13
+
+The current architecture is:
+
+```text
+Business Recorder Agent
+↓
+Business Analyst Agent
+↓
+Content Operator Agent
+↓
+Business Advisor Agent
+```
+
+The future user experience should be:
+
+```text
+One chat window.
+The owner talks naturally.
+The system coordinates multiple agents behind the scenes.
+```
+
+Frontend should be simple.
+
+Backend can become complex.
+
+The owner should not need to understand agents, databases, dashboards, RAG, or orchestration.
+
+The product should feel like one conversation, even if the system behind it becomes multi-agent.
