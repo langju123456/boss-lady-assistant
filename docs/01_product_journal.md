@@ -1,36 +1,41 @@
 # Product Journal
 
-## Entry Template
+Purpose:
 
-### Date
+Raw founder thinking.
 
-### Current Hypothesis
+Messy notes are allowed.
 
-### What Changed Today
+Use this file for questions, ideas, doubts, hypotheses, scraps from conversations, and product thoughts that are not ready to become lessons yet.
 
-### What I Learned
+No formatting requirements.
 
-### Next Action
+When a thought becomes reusable, move it into:
+
+```text
+docs/06_lessons_learned.md
+```
 
 ## Entries
 
-### Date
-
-2026-06-13
-
-### Current Hypothesis
+### 2026-06-13
 
 At first, the project was imagined as an AI knowledge base for beauty salons.
 
-### What Changed Today
+That idea changed.
 
-The thinking shifted from "AI knowledge base" to "business operating assistant".
+The more important problem is not "answering beauty salon knowledge questions".
 
-### What I Learned
+The more important problem is helping a small salon owner run the business every day:
 
-Small salon owners do not care about AI itself. They care about customer flow, revenue, activity planning, customer follow-up, and saving time.
+* record what happened
+* understand revenue and customer flow
+* plan simple promotions
+* follow up with customers
+* save time
 
-### Next Action
+Small salon owners do not care about AI itself.
 
-Build the Business Recorder Agent first.
+They care about customer flow, revenue, activity planning, customer follow-up, and saving time.
 
+Next: build the Business Recorder Agent first.

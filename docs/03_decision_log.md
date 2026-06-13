@@ -1,114 +1,64 @@
 # Decision Log
 
-## Decision Template
+Purpose:
 
-### Decision ID
+Only major product and technical decisions.
 
-### Date
+Use this file when a decision changes product direction, architecture, or MVP scope.
 
-### Decision
+Keep entries short.
 
-### Reason
-
-### Alternatives Considered
-
-### Expected Impact
+Detailed lessons should go into `docs/06_lessons_learned.md`.
 
 ## Decisions
 
-### Decision ID
-
-#001
-
-### Date
+### #001
 
 2026-06-13
 
-### Decision
-
+Decision:
 Do not start with RAG.
 
-### Reason
-
+Reason:
 Current user pain is not knowledge retrieval. The first pain is daily business recording and structured data collection.
 
-### Alternatives Considered
-
-Build an AI knowledge base for salon operations first.
-
-### Expected Impact
-
-The MVP stays close to the user's daily workflow and starts collecting useful structured data.
-
-### Decision ID
-
-#002
-
-### Date
+### #002
 
 2026-06-13
 
-### Decision
-
+Decision:
 Start with text input before voice input.
 
-### Reason
-
+Reason:
 Text input is easier to build and test. Voice input can be added later with Whisper.
 
-### Alternatives Considered
-
-Start directly with voice input.
-
-### Expected Impact
-
-The first version can be shipped and tested faster while keeping the voice-first direction open.
-
-### Decision ID
-
-#003
-
-### Date
+### #003
 
 2026-06-13
 
-### Decision
-
+Decision:
 Use SQLite first.
 
-### Reason
-
+Reason:
 The MVP is for one salon first. A local-first database is enough.
 
-### Alternatives Considered
-
-Use Postgres, a hosted database, or a full SaaS backend from day one.
-
-### Expected Impact
-
-The system remains simple, cheap, and easy to operate during validation.
-
-### Decision ID
-
-#004
-
-### Date
+### #004
 
 2026-06-13
 
-### Decision
-
+Decision:
 Do not build authentication, payment, or multi-tenant SaaS yet.
 
-### Reason
-
+Reason:
 The current goal is to validate one real user and one real workflow.
 
-### Alternatives Considered
+### #005
 
-Build a full SaaS product foundation immediately.
+2026-06-13
 
-### Expected Impact
+Decision:
+Build Business Recorder Agent first.
 
-Development stays focused on proving whether the core workflow is useful.
+Reason:
+User pain starts with daily business recording. Advice, reports, and content become more useful after the system has structured data.
 

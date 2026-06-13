@@ -1,122 +1,172 @@
 # Lessons Learned
 
+This is the most important file in the documentation system.
+
+Purpose:
+
+Transform product thinking into reusable lessons.
+
+This file is the source of truth for:
+
+```text
+Raw Thinking
+↓
+Lessons Learned
+↓
+Build In Public
+↓
+LinkedIn
+Blog
+Case Studies
+Interview Stories
+```
+
+The founder should only need to maintain this file.
+
+`docs/05_build_in_public.md` is generated from this file by:
+
+```bash
+python3 scripts/process_lessons.py
+```
+
 ## Lesson Template
 
-### Date
+```text
+---
+Date:
 
-### Original Assumption
+Original Assumption:
 
-### New Insight
+New Insight:
 
-### Why It Matters
+Evidence:
 
-### Product Decision
+Why It Matters:
 
-### LinkedIn Draft Angle
+Product Decision:
+
+LinkedIn Angle:
+
+---
+```
 
 ## Lessons
 
-### Lesson 1
-
-### Date
+---
+Date:
 
 2026-06-13
 
-### Original Assumption
+Original Assumption:
 
 AI is the product.
 
-### New Insight
+New Insight:
 
 AI is not the product. AI is the tool. The product is business value for salon owners.
 
-### Why It Matters
+Evidence:
+
+Founder observations and early product thinking showed that salon owners care more about customer flow, revenue, promotions, and saving time than the AI system itself.
+
+Why It Matters:
 
 The owner does not care whether the system is technically impressive. She cares whether it helps her get more customers, understand her business, save time, and make better decisions.
 
-### Product Decision
+Product Decision:
 
 Do not sell AI. Sell business outcomes.
 
-### LinkedIn Draft Angle
+LinkedIn Angle:
 
 Customers do not buy AI. Customers buy outcomes.
 
-### Lesson 2
-
-### Date
+---
+Date:
 
 2026-06-13
 
-### Original Assumption
+Original Assumption:
 
 The first product should be an AI knowledge base.
 
-### New Insight
+New Insight:
 
 The first pain point is not knowledge retrieval. The first pain point is daily business recording and structured data collection.
 
-### Why It Matters
+Evidence:
+
+Customer discovery and founder observations suggest that small salon owners first need help turning daily business activity into usable data.
+
+Why It Matters:
 
 Without daily data, the system cannot produce useful reports, advice, or marketing recommendations.
 
-### Product Decision
+Product Decision:
 
 Build Business Recorder Agent first.
 
-### LinkedIn Draft Angle
+LinkedIn Angle:
 
 Before building AI agents, understand what the user actually does every day.
 
-### Lesson 3
-
-### Date
+---
+Date:
 
 2026-06-13
 
-### Original Assumption
+Original Assumption:
 
 Small salon owners need dashboards and CRM.
 
-### New Insight
+New Insight:
 
 They often do not want to learn software. They want to speak naturally and get useful outputs.
 
-### Why It Matters
+Evidence:
+
+Target users prefer WeChat and voice communication, and do not have a strong habit of using Excel or structured CRM systems.
+
+Why It Matters:
 
 For this user, a powerful dashboard can still fail if it requires a new habit. Conversation fits the way the owner already works through WeChat and voice messages.
 
-### Product Decision
+Product Decision:
 
 Use a chat-first and voice-first interaction model.
 
-### LinkedIn Draft Angle
+LinkedIn Angle:
 
 For non-technical users, the best interface may not be a dashboard. It may be a conversation.
 
-### Lesson 4
-
-### Date
+---
+Date:
 
 2026-06-13
 
-### Original Assumption
+Original Assumption:
 
 More features make the product better.
 
-### New Insight
+New Insight:
 
 The MVP should focus on one real salon and one daily workflow.
 
-### Why It Matters
+Evidence:
+
+The product is being built for one real salon first, where the most important workflow is daily recording.
+
+Why It Matters:
 
 The first version needs to prove that one real owner can use it in daily operations. Extra features can hide whether the core behavior actually works.
 
-### Product Decision
+Product Decision:
 
 Start with one salon, one workflow, and one agent.
 
-### LinkedIn Draft Angle
+LinkedIn Angle:
 
 The first version of an AI product should not be impressive. It should be usable.
+
+---
 

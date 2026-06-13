@@ -63,6 +63,36 @@ Phase 1 is intentionally small: one salon, no login, no CRM, no payments.
 * [Lessons Learned](docs/06_lessons_learned.md)
 * [LinkedIn Post Generator Prompt](docs/linkedin_post_prompt.md)
 
+## Knowledge Management System
+
+Record once. Reuse everywhere.
+
+```text
+Product Journal
++
+Customer Discovery
++
+Decision Log
+↓
+Lessons Learned
+↓
+Build In Public
+↓
+LinkedIn / Blog / Interview Stories
+```
+
+The founder should primarily maintain:
+
+```text
+docs/06_lessons_learned.md
+```
+
+Then regenerate the public story:
+
+```bash
+python3 scripts/process_lessons.py
+```
+
 ## Quick Start
 
 ```bash

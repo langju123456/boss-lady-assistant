@@ -1,5 +1,13 @@
 # Customer Discovery
 
+Purpose:
+
+Customer observations, interviews, quotes, pain points, and workflows.
+
+Use this file for raw customer discovery material.
+
+When an observation becomes a reusable product lesson, move it into `docs/06_lessons_learned.md`.
+
 ## Interview Template
 
 ### Interview Date
@@ -68,4 +76,3 @@ To be filled after real customer conversations.
 * What activity formats have worked before?
 * What customer follow-up messages feel natural in her voice?
 * Would voice input be easier than typing?
-

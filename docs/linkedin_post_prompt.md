@@ -38,11 +38,9 @@ Your job is to convert lessons, customer insights, product pivots, technical dec
 
 Use:
 
-* `docs/06_lessons_learned.md` as the primary source of truth
-* `docs/02_customer_discovery.md` for customer discovery context
-* `docs/03_decision_log.md` for product and technical decisions
-* `docs/04_architecture.md` for AI product development context
-* `docs/05_build_in_public.md` for public storytelling context
+* `docs/06_lessons_learned.md` as the source of truth
+* `docs/05_build_in_public.md` as the generated founder narrative
+* Other docs only as background context when needed
 
 Do not invent fake traction, fake quotes, fake customers, fake revenue, or fake metrics.
 
@@ -269,3 +267,5 @@ Every post should make one clear point.
 Do not try to explain the whole project in every post.
 
 Turn one lesson into one useful, honest, reusable piece of content.
+
+The founder should not need to update this prompt for every new idea. Add new thinking to `docs/06_lessons_learned.md`, run `python3 scripts/process_lessons.py`, then generate content from the resulting lesson and public story.

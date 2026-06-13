@@ -1,5 +1,13 @@
 # Architecture
 
+Purpose:
+
+Technical evolution only.
+
+Use this file for agent architecture, database changes, system design, and future technical roadmap.
+
+Product lessons should go into `docs/06_lessons_learned.md`.
+
 ## Current MVP Architecture
 
 User input:
@@ -58,4 +66,3 @@ Initial tables:
 * Add RAG only when historical activity plans, customer notes, and business documents become useful
 * Add WeChat integration later
 * Add dashboard later
-

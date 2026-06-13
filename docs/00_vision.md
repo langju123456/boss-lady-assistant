@@ -1,5 +1,15 @@
 # Vision
 
+Purpose:
+
+Long-term vision only.
+
+Rarely updated.
+
+Day-to-day product thinking should go into `docs/01_product_journal.md`.
+
+Reusable lessons should go into `docs/06_lessons_learned.md`.
+
 ## Why This Project Exists
 
 Small beauty salon owners often do not use Excel, CRM, or digital systems. They rely on memory, paper notes, WeChat chats, and personal experience.
@@ -36,4 +46,3 @@ Four backend agents:
 MVP phase.
 
 Focus on one real salon first.
-
