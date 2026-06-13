@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>老板娘经营助手</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">单店 MVP</p>
+          <h1>老板娘经营助手</h1>
+          <p class="subtitle">像发微信一样记录经营，自动生成日报、建议和活动文案。</p>
+        </div>
+      </section>
+
+      <section class="workbench">
+        <div class="panel">
+          <label for="recordText">今日经营</label>
+          <textarea id="recordText">今天来了8个客人，成交5个，收入3200元，其中祛斑2个，补水3个。</textarea>
+          <button id="recordButton">保存日报</button>
+          <pre id="recordResult"></pre>
+        </div>
+
+        <div class="panel">
+          <label for="period">经营报告</label>
+          <select id="period">
+            <option value="daily">今日</option>
+            <option value="weekly">本周</option>
+            <option value="monthly">本月</option>
+          </select>
+          <button id="reportButton">查看报告</button>
+          <pre id="reportResult"></pre>
+        </div>
+
+        <div class="panel">
+          <label for="contentTopic">活动内容</label>
+          <input id="contentTopic" value="七夕活动" />
+          <button id="contentButton">生成文案</button>
+          <pre id="contentResult"></pre>
+        </div>
+
+        <div class="panel">
+          <label for="adviceQuestion">经营问题</label>
+          <input id="adviceQuestion" value="最近生意不好怎么办" />
+          <button id="adviceButton">问顾问</button>
+          <pre id="adviceResult"></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
