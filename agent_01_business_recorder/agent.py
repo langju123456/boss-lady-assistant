@@ -31,8 +31,6 @@ class BusinessRecorderAgent:
         missing_fields = []
         if customers is None:
             missing_fields.append("今天来了几个客人")
-        if deals is None:
-            missing_fields.append("成交了几个")
         if revenue is None:
             missing_fields.append("收入多少钱")
 

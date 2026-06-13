@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from shared.database.repository import save_generated_content
+from shared.tools.openai_helper import generate_with_openai
 
 
 class ContentOperatorAgent:
@@ -37,5 +38,14 @@ class ContentOperatorAgent:
                 "朋友成交后，老顾客再送项目抵扣券。"
             ),
         }
+        ai_text = generate_with_openai(
+            "你是一个懂中国县城美容院经营的营销文案助手。输出要接地气，老板娘可以直接复制到微信使用。",
+            (
+                f"请为美容院生成一个{topic}营销方案。必须包含三个部分："
+                "活动方案、朋友圈文案、客户通知文案。语言简单、具体、不要夸张。"
+            ),
+        )
+        if ai_text:
+            content["ai_generated"] = ai_text
         save_generated_content(topic, goal, content)
         return content

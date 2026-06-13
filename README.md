@@ -6,6 +6,8 @@ A voice-first AI business assistant for small beauty salon owners in China.
 
 Help one real salon owner record daily business data through natural language input.
 
+The first usable demo is designed for the founder's mother to test this week.
+
 ## Core Workflow
 
 ```text
@@ -95,10 +97,24 @@ python3 scripts/process_lessons.py
 
 ## Quick Start
 
+### Streamlit Demo
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+Open:
+
+```text
+http://localhost:8501
+```
+
+### FastAPI Backend
+
+```bash
 uvicorn api.main:app --reload
 ```
 
@@ -137,9 +153,82 @@ cp .env.example .env
 export OPENAI_API_KEY="your_api_key"
 ```
 
+Without `OPENAI_API_KEY`, the app still works with local rule-based parsing, templates, summaries, and advice.
+
+## MVP User Flow
+
+The salon owner opens one URL and types naturally:
+
+```text
+今天来了8个客人收入3200新客4个老客4个
+```
+
+The system replies:
+
+```text
+已记录今天数据
+营业额：3200元
+客户数：8
+新客数：4
+老客数：4
+```
+
+Then she can ask:
+
+```text
+帮我做七夕活动
+```
+
+The system returns:
+
+- 活动方案
+- 朋友圈文案
+- 客户通知文案
+
+## Deployment
+
+### Render
+
+1. Push this repo to GitHub.
+2. Create a new Render Web Service.
+3. Use this repository.
+4. Build command:
+
+```bash
+pip install -r requirements.txt
+```
+
+5. Start command:
+
+```bash
+streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+```
+
+6. Add environment variables:
+
+```text
+OPENAI_API_KEY=your_api_key
+OPENAI_MODEL=gpt-4o-mini
+BOSS_LADY_DB_PATH=shared/database/boss_lady.sqlite3
+```
+
+`render.yaml` is also included for Render Blueprint deployment.
+
+### Railway
+
+1. Create a new Railway project from this GitHub repo.
+2. Add the same environment variables.
+3. Use this start command:
+
+```bash
+streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+```
+
 ## API
 
 - `POST /api/record` - record a natural language business report
+- `POST /api/chat` - one-message chat router for record, summary, content, and advice
+- `GET /api/summary/today` - today summary
 - `GET /api/reports/daily?date=YYYY-MM-DD` - daily report
 - `GET /api/reports/weekly?date=YYYY-MM-DD` - weekly report ending on date
 - `GET /api/reports/monthly?date=YYYY-MM-DD` - month report

@@ -18,3 +18,7 @@ class ContentRequest(BaseModel):
 
 class AdviceRequest(BaseModel):
     question: str = Field(..., min_length=1, description="自然语言经营问题")
+
+
+class ChatRequest(BaseModel):
+    message: str = Field(..., min_length=1, description="老板娘发送的一句话")

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from agent_02_business_analyst.agent import BusinessAnalystAgent
 from shared.database.repository import get_recent_reports, save_advisor_log
+from shared.tools.openai_helper import generate_with_openai
 
 
 class BusinessAdvisorAgent:
@@ -12,6 +13,17 @@ class BusinessAdvisorAgent:
         reports = get_recent_reports(30)
         metrics = self.analyst._metrics(reports)
         answer = self._answer(question, metrics)
+        ai_summary = generate_with_openai(
+            "你是一个懂中国小美容院经营的顾问。回答要短、直接、适合老板娘听懂，不要使用复杂术语。",
+            (
+                f"用户问题：{question}\n"
+                f"近30天数据：到店{metrics['customers']}人，成交{metrics['deals']}单，"
+                f"收入{metrics['revenue']:.0f}元，成交率{metrics['conversion_rate']:.0f}%。\n"
+                "请给出一句总结和3条今天就能执行的建议。"
+            ),
+        )
+        if ai_summary:
+            answer["ai_generated"] = ai_summary
         save_advisor_log(question, answer["summary"])
         return answer
 

@@ -12,8 +12,10 @@ from agent_01_business_recorder.agent import BusinessRecorderAgent
 from agent_02_business_analyst.agent import BusinessAnalystAgent
 from agent_03_content_operator.agent import ContentOperatorAgent
 from agent_04_business_advisor.agent import BusinessAdvisorAgent
+from shared.database.repository import get_daily_report
 from shared.database.schema import init_db
-from shared.models.business import AdviceRequest, ContentRequest, RecordRequest
+from shared.models.business import AdviceRequest, ChatRequest, ContentRequest, RecordRequest
+from shared.tools.chat_router import ChatRouter
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 FRONTEND_DIR = BASE_DIR / "frontend"
@@ -33,6 +35,7 @@ recorder = BusinessRecorderAgent()
 analyst = BusinessAnalystAgent()
 content_operator = ContentOperatorAgent()
 advisor = BusinessAdvisorAgent()
+chat_router = ChatRouter()
 
 
 @app.post("/api/record")
@@ -61,6 +64,16 @@ def generate_content(payload: ContentRequest):
 @app.post("/api/advice")
 def ask_for_advice(payload: AdviceRequest):
     return advisor.advise(payload.question)
+
+
+@app.post("/api/chat")
+def chat(payload: ChatRequest):
+    return chat_router.handle(payload.message)
+
+
+@app.get("/api/summary/today")
+def today_summary():
+    return get_daily_report(date.today()) or {}
 
 
 app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")

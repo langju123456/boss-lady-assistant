@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: boss-lady-assistant
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: BOSS_LADY_DB_PATH
+        value: shared/database/boss_lady.sqlite3
+
